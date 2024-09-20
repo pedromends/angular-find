@@ -12,6 +12,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import { HoursComponent } from './hours/hours.component';
 import {MatTableModule} from '@angular/material/table';
+import { ComponentsModule } from '../components/components.module';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import {MatTableModule} from '@angular/material/table';
     FormsModule,
     ReactiveFormsModule,
     DragDropModule,
-    MatTableModule
+    MatTableModule,
+    ComponentsModule
   ],
 })
 export class Module1Module { }
