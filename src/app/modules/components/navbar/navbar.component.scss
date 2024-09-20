@@ -1,0 +1,19 @@
+.navbar{
+    background-color: #0e7a79;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height:50px;
+}
+
+.navbar a{
+    color:white;
+    text-decoration: none;
+    transition: 0.5s ease-in-out;
+}
+
+.navbar a:hover{
+    text-decoration: underline;
+    color:yellow;
+
+}

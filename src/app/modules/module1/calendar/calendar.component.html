@@ -1,0 +1,35 @@
+<main>
+  <form [formGroup]="form" class="container">
+    <mat-form-field appearance="fill" style="width: 300px">
+      <mat-label>Título do evento</mat-label>
+      <input matInput formControlName="title" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" style="width: 300px">
+      <mat-label>Descrição da Tarefa</mat-label>
+      <input matInput formControlName="description" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" style="width: 300px">
+      <mat-label>Status</mat-label>
+      <mat-select formControlName="status">
+        <mat-option value="Em execução">Em execução</mat-option>
+        <mat-option value="Em execução">Concluído</mat-option>
+        <mat-option value="Encontro presencial">À fazer</mat-option>
+        <mat-option value="Encontro presencial">Cancelado</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" style="width: 300px">
+      <mat-label>Data</mat-label>
+      <input matInput formControlName="dateCreation" [matDatepicker]="picker" />
+      <mat-datepicker-toggle
+        matIconSuffix
+        [for]="picker"
+      ></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <button type="submit" class="btn" (click)="save()">Enviar</button>
+  </form>
+</main>

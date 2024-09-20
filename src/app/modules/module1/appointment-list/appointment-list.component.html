@@ -1,0 +1,48 @@
+<main>
+  <table mat-table [dataSource]="formsData" class="container mat-elevation-z8">
+    <ng-container matColumnDef="title">
+      <th mat-header-cell *matHeaderCellDef> Título </th>
+      <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="description">
+      <th mat-header-cell *matHeaderCellDef> Descrição </th>
+      <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="status">
+      <th mat-header-cell *matHeaderCellDef> Status </th>
+      <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="dateCreation">
+      <th mat-header-cell *matHeaderCellDef> Data de Criação </th>
+      <td mat-cell *matCellDef="let element"> {{ formatDate(element.dateCreation) }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="dateUpdate">
+      <th mat-header-cell *matHeaderCellDef> Data de Atualização </th>
+      <td mat-cell *matCellDef="let element"> {{ formatDate(element.dateUpdate) }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef> Ações </th>
+      <td mat-cell *matCellDef="let element">
+        <div style="display:flex">
+          <button class="btn" (click)="seeDetails(element)">
+            <img src="assets/icons/eye.svg" style="height: 1.5rem" alt="">
+          </button>
+          <button class="btn" (click)="edit(element)">
+            <img src="assets/icons/pencil.svg" style="height: 1.5rem" alt="">
+          </button>
+          <button class="btn" (click)="deleted(element.id)">
+            <img src="assets/icons/trash.svg" style="height: 1.5rem" alt="">
+          </button>
+        </div>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</main>
