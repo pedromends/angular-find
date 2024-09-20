@@ -31,7 +31,7 @@ export class MyhttpService {
   put(url:string, data: any) {
     let headers = new HttpHeaders();
     this.createAuthorizationHeader(headers);
-    return this.http.post(url, data, {
+    return this.http.put(url, data, {
       headers: headers
     });
   }

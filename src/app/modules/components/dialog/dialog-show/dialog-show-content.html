@@ -1,7 +1,15 @@
-<main>
-  <mat-dialog-actions align="end">
-    <button mat-button mat-dialog-close>Cancelar</button>
-    <button mat-button [mat-dialog-close]="true" (click)="deleteTask()" cdkFocusInitial>Excluir</button>
-  </mat-dialog-actions>
+<main style="margin:2rem">
+  <div style="display: flex; flex-direction: column; gap:1rem">
+    <p>{{ task.id }}</p>
+    <p>{{ task.title }}</p>
+    <p>{{ task.description }}</p>
+    <p>{{ task.status }}</p>
+    <p>{{ task.dateCreation }}</p>
+    <p>{{ task.dateUpdate }}</p>
+
+    <mat-dialog-actions align="end">
+      <button mat-button mat-dialog-close type="submit" class="btn">Enviar</button>
+      <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Cancelar</button>
+    </mat-dialog-actions>
+  </div>
 </main>
-  

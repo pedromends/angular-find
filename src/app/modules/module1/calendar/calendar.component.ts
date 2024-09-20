@@ -38,6 +38,7 @@ export class CalendarComponent implements OnInit {
     this.form.get('dateUpdate')?.setValue('')
 
     this.router.navigate(['/task-list']);
+    window.location.reload()
   }
 
   public update(data:any){

@@ -40,7 +40,7 @@ export class DialogDeleteOpen {
   deleteTask() {
     const taskId = this.data.id;
     this.taskService.deleteTask(taskId).subscribe((response) => {
-      this.router.navigate(['/'])
+      window.location.reload()
     });
   }
 }

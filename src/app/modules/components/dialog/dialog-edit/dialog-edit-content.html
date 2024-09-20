@@ -15,8 +15,8 @@
       <mat-select formControlName="status">
         <mat-option value="Em execução">Em execução</mat-option>
         <mat-option value="Em execução">Concluído</mat-option>
-        <mat-option value="Encontro presencial">À fazer</mat-option>
-        <mat-option value="Encontro presencial">Cancelado</mat-option>
+        <mat-option value="À fazer">À fazer</mat-option>
+        <mat-option value="Cancelado">Cancelado</mat-option>
       </mat-select>
     </mat-form-field>
 
@@ -30,6 +30,9 @@
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
 
-    <button type="submit" class="btn" (click)="saveChanges()">Enviar</button>
+    <mat-dialog-actions align="end">
+      <button mat-button mat-dialog-close type="submit" class="btn" (click)="saveChanges()">Enviar</button>
+      <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Cancelar</button>
+    </mat-dialog-actions>
   </form>
 </main>

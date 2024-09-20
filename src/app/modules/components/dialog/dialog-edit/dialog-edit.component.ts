@@ -66,9 +66,12 @@ export class DialogEditOpen {
     this.form.get('dateUpdate')?.setValue(this.form.get('dateCreation')?.value)
     this.form.get('id')?.setValue(this.data.task.id)
 
+    console.log(this.form.value)
+    
     this.taskService.updateTask(this.form.value).subscribe((response) => {
       console.log(response)
-      alert('Saved successfully')
+      alert('Updated successfully')
+      window.location.reload()
     })
 
     this.form.get('title')?.setValue('')
@@ -78,12 +81,5 @@ export class DialogEditOpen {
     this.form.get('dateUpdate')?.setValue('')
 
     this.router.navigate(['/task-list']);
-  }
-  
-  editTask() {
-    const taskId = this.data.id;
-    this.taskService.updateTask(taskId).subscribe((response) => {
-      this.router.navigate(['/'])
-    });
   }
 }
