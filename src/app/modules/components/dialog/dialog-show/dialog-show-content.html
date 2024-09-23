@@ -1,11 +1,11 @@
-<main style="margin:2rem">
-  <div style="display: flex; flex-direction: column; gap:1rem">
-    <p>{{ task.id }}</p>
-    <p>{{ task.title }}</p>
-    <p>{{ task.description }}</p>
-    <p>{{ task.status }}</p>
-    <p>{{ task.dateCreation }}</p>
-    <p>{{ task.dateUpdate }}</p>
+<main class="main-exterior">
+  <div class="data">
+    <p><b>ID:</b> {{ task.id }}</p>
+    <p><b>Título:</b> {{ task.title }}</p>
+    <p><b>Descrição:</b> {{ task.description }}</p>
+    <p><b>Status:</b> {{ task.status }}</p>
+    <p><b>Data de Criação:</b> {{ task.dateCreation }}</p>
+    <p><b>Data de Atualização:</b> {{ task.dateUpdate }}</p>
 
     <mat-dialog-actions align="end">
       <button mat-button mat-dialog-close type="submit" class="btn">Enviar</button>

@@ -10,7 +10,6 @@ import { DialogShowComponent } from './dialog/dialog-show/dialog-show.component'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
-import { MainTableComponent } from './module1/table/main-table/main-table.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +17,6 @@ import { MainTableComponent } from './module1/table/main-table/main-table.compon
     DialogDeleteComponent,
     DialogEditComponent,
     DialogShowComponent,
-    MainTableComponent
   ],
   imports: [
     CommonModule,

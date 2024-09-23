@@ -1,13 +1,23 @@
 .btn {
-    border-color: #0a7e79;
-    border-style: solid;
-    border-radius: 5px;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    border: none;
-    height: 2rem;
-    color: white;
-  }
-  
+  border-color: #0a7e79;
+  border-style: solid;
+  border-radius: 5px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  border: none;
+  height: 2rem;
+  color: white;
+}
+
+.data {
+  display: flex;
+  flex-direction: column;
+  gap:1rem;
+}
+
+.main-exterior {
+  padding: 1.5rem;
+  margin:2rem
+}

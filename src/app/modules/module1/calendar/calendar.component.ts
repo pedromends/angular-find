@@ -30,15 +30,13 @@ export class CalendarComponent implements OnInit {
     this.taskService.createTask(this.form.value).subscribe((response) => {
       alert('Saved successfully')
     })
-
-    this.form.get('title')?.setValue('')
-    this.form.get('description')?.setValue('')
-    this.form.get('status')?.setValue('')
-    this.form.get('dateCreation')?.setValue('')
-    this.form.get('dateUpdate')?.setValue('')
-
     this.router.navigate(['/task-list']);
-    window.location.reload()
+
+    // this.form.get('title')?.setValue('')
+    // this.form.get('description')?.setValue('')
+    // this.form.get('status')?.setValue('')
+    // this.form.get('dateCreation')?.setValue('')
+    // this.form.get('dateUpdate')?.setValue('')
   }
 
   public update(data:any){

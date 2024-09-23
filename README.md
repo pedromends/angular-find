@@ -1,27 +1,49 @@
-# Angular
+# Angular + Spring Boot Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.6.
+Este projeto é uma aplicação web fullstack construída com **Angular.js** no front-end e **Spring Boot** no back-end. O objetivo é criar uma interface de usuário reativa e um serviço back-end robusto para gerenciar dados e fornecer uma API RESTful fornecendo um serviço de gerenciador de tarefas
 
-## Development server
+## Requisitos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Para rodar o projeto, você precisa ter instalado:
+- **Node.js** (v16 ou superior)
+- **NPM** (v8 ou superior) ou **Yarn**
+- **Java 11+** (JDK)
+- **Maven** (se não estiver embutido no projeto Spring Boot)
+- **MySQL** ou outro banco de dados compatível
 
-## Code scaffolding
+## 1. Configuração do Back-end (Spring Boot)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Passos:
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/pedromends/api-find
+2. Crie um banco de dados no MySQL:
+   ```bash
+    CREATE DATABASE api-find;
+3. Configure o arquivo application.properties ou application.yml com as credenciais do banco de dados:
+   ```bash
+    spring.datasource.url=jdbc:mysql://localhost:3306/api-find
+    spring.datasource.username=root
+    spring.datasource.password=admin
+    spring.jpa.hibernate.ddl-auto=update
+    server.port=8080
+4. Rode o projeto Spring Boot:
+   ```bash
+    mvn spring-boot:run
+5. Ou rode o projeto na Sua IDE preferida (IntelliJ, Eclipse, etc)
+## 2. Configuração do Front-end (Angular.js)
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Passos:
+1. Clone o repositório:
+   ```bash
+    git clone https://github.com/pedromends/angular-find
+2. Instale as dependências::
+   ```bash
+   npm install
+3. Execute o servidor de desenvolvimento:
+   ```bash
+   ng serve
+4. Clone o repositório:
+   ```bash
+   cd ../frontend
+    

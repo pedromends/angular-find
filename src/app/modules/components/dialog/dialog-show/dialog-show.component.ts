@@ -7,19 +7,19 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dialog-show',
+  styleUrls: ['./dialog-show.component.scss'],
   templateUrl: './dialog-show.component.html',
-  styleUrls: ['./dialog-show.component.scss']
 })
 export class DialogShowComponent {
   @Input() task:any = null ;
-
+  
   readonly dialog = inject(MatDialog);
-
+  
   openDialog() {
     const dialogRef = this.dialog.open(DialogDeleteOpen, {
       data: {task: this.task}
     });
-
+    
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
     });
@@ -33,6 +33,7 @@ export class DialogShowComponent {
   templateUrl: 'dialog-show-content.html',
   standalone: true,
   imports: [MatDialogModule, MatButtonModule],
+  styleUrls: ['./dialog-show.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DialogDeleteOpen {

@@ -29,13 +29,13 @@ const ELEMENT_DATA: PeriodicElement[] = [
  * @title Table with sorting
  */
 @Component({
-  selector: './test-example',
-  styleUrls: ['./test.component.scss'],
-  templateUrl: './test.component.html',
+  selector: 'app-main-table',
+  templateUrl: './main-table.component.html',
+  styleUrls: ['./main-table.component.scss'],
   standalone: true,
   imports: [ MatTableModule, MatSortModule, ComponentsModule ],
 })
-export class TestComponent implements AfterViewInit {
+export class MainTableComponent implements AfterViewInit {
   private _liveAnnouncer = inject(LiveAnnouncer);
 
   tasks: any[] = [];
@@ -68,7 +68,12 @@ export class TestComponent implements AfterViewInit {
     return formatDate(date, 'dd-MM-yyyy', 'en');
   }
 
+  /** Announce the change in sort state for assistive technology. */
   announceSortChange(sortState: Sort) {
+    // This example uses English messages. If your application supports
+    // multiple language, you would internationalize these strings.
+    // Furthermore, you can customize the message to add additional
+    // details about the values being sorted.
     if (sortState.direction) {
       this._liveAnnouncer.announce(`Sorted ${sortState.direction}ending`);
     } else {
@@ -77,3 +82,7 @@ export class TestComponent implements AfterViewInit {
   }
 }
 
+
+/**  Copyright 2024 Google LLC. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at https://angular.io/license */

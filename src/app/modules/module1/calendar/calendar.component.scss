@@ -14,10 +14,11 @@ main {
 }
 
 .btn {
-  background-color: rgb(195, 66, 195);
-  width: 10rem;
+  background-color: #0e7a79;
+  width: 15rem;
   border-radius: round($number: 20px);
+  font-size: 1rem;
   border: none;
-  height: 2rem;
+  height: 3rem;
   color: white;
 }

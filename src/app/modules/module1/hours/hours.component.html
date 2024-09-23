@@ -1,9 +1,0 @@
-<div class="container">
-  <p>Meetings scheduled for {{ date }}</p>
-  <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
-    <div class="example-box" *ngFor="let hour of hours" cdkDrag style="justify-content: space-around;">
-      <span>{{ hour }}h</span>
-      <span> {{ verify(hour) }}</span>
-    </div>
-  </div>
-</div>
