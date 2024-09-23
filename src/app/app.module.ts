@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ComponentsModule } from './modules/components/components.module';
 import { HttpClientModule } from '@angular/common/http';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     BrowserAnimationsModule,
     ComponentsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSortModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

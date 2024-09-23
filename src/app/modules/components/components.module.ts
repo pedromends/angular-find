@@ -10,13 +10,15 @@ import { DialogShowComponent } from './dialog/dialog-show/dialog-show.component'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
+import { MainTableComponent } from './module1/table/main-table/main-table.component';
 
 @NgModule({
   declarations: [
     NavbarComponent,
     DialogDeleteComponent,
     DialogEditComponent,
-    DialogShowComponent
+    DialogShowComponent,
+    MainTableComponent
   ],
   imports: [
     CommonModule,
@@ -26,13 +28,13 @@ import { MatSelectModule } from '@angular/material/select';
     FormsModule,
     ReactiveFormsModule,
     MatFormFieldModule,
-    MatSelectModule
+    MatSelectModule,
   ],
   exports: [
     NavbarComponent,
     DialogDeleteComponent,
     DialogEditComponent,
-    DialogShowComponent
+    DialogShowComponent,
   ]
 })
 export class ComponentsModule { }

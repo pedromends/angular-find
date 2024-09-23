@@ -1,6 +1,6 @@
-import {MatDialog, MatDialogModule} from '@angular/material/dialog';
-import {MatButtonModule} from '@angular/material/button';
-import {ChangeDetectionStrategy, Component, Inject, inject, Input} from '@angular/core';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
+import { ChangeDetectionStrategy, Component, Inject, inject, Input } from '@angular/core';
 import { TasksService } from 'src/app/services/tasks/tasks.service';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Router } from '@angular/router';
@@ -37,7 +37,10 @@ export class DialogEditComponent {
   selector: 'dialog-content-example-dialog',
   templateUrl: 'dialog-edit-content.html',
   standalone: true,
-  imports: [MatDialogModule, MatButtonModule, FormsModule, ReactiveFormsModule, MatFormFieldModule, MatSelectModule, MatDatepickerModule, MatInputModule],
+  imports: [ MatDialogModule, MatButtonModule, FormsModule,
+    ReactiveFormsModule, MatFormFieldModule, MatSelectModule,
+    MatDatepickerModule, MatInputModule
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DialogEditOpen {
@@ -80,6 +83,6 @@ export class DialogEditOpen {
     this.form.get('dateCreation')?.setValue('')
     this.form.get('dateUpdate')?.setValue('')
 
-    this.router.navigate(['/task-list']);
+    window.location.reload()
   }
 }

@@ -35,6 +35,7 @@ export class DialogDeleteComponent {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DialogDeleteOpen {
+  
   constructor(private taskService: TasksService, @Inject(MAT_DIALOG_DATA) public data: any, private router: Router) { }
 
   deleteTask() {
