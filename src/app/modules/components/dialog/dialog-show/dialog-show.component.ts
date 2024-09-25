@@ -4,6 +4,7 @@ import {ChangeDetectionStrategy, Component, Inject, inject, Input} from '@angula
 import { TasksService } from 'src/app/services/tasks/tasks.service';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Router } from '@angular/router';
+import { formatDate } from '@angular/common';
 
 @Component({
   selector: 'app-dialog-show',
@@ -48,5 +49,9 @@ export class DialogDeleteOpen {
     this.taskService.deleteTask(taskId).subscribe((response) => {
       this.router.navigate(['/'])
     });
+  }
+
+  formatDate(date:any){
+    return formatDate(date, 'dd-MM-yyyy', 'en');
   }
 }

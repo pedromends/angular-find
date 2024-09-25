@@ -31,6 +31,7 @@ export class CalendarComponent implements OnInit {
       alert('Salvo com sucesso')
     })
     this.router.navigate(['/task-list']);
+    window.location.reload()
 
     // this.form.get('title')?.setValue('')
     // this.form.get('description')?.setValue('')

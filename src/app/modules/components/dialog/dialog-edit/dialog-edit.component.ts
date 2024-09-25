@@ -51,7 +51,7 @@ export class DialogEditOpen {
     description: new FormControl(null, [Validators.required]),
     status: new FormControl(null, [Validators.required]),
     dateCreation: new FormControl(null, [Validators.required]),
-    dateUpdate: new FormControl(null, [Validators.required]),
+    dateUpdate: new FormControl(null),
   });
 
   constructor(private taskService: TasksService, @Inject(MAT_DIALOG_DATA) public data: any, private router: Router) { }
@@ -66,7 +66,6 @@ export class DialogEditOpen {
   }
 
   public saveChanges(){
-    this.form.get('dateUpdate')?.setValue(this.form.get('dateCreation')?.value)
     this.form.get('id')?.setValue(this.data.task.id)
 
     console.log(this.form.value)

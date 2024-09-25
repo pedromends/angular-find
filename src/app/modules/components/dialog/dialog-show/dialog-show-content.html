@@ -4,8 +4,8 @@
     <p><b>Título:</b> {{ task.title }}</p>
     <p><b>Descrição:</b> {{ task.description }}</p>
     <p><b>Status:</b> {{ task.status }}</p>
-    <p><b>Data de Criação:</b> {{ task.dateCreation }}</p>
-    <p><b>Data de Atualização:</b> {{ task.dateUpdate }}</p>
+    <p><b>Data de Criação:</b> {{ formatDate(task.dateCreation) }}</p>
+    <p><b>Data de Atualização:</b> {{ formatDate(task.dateUpdate) }}</p>
 
     <mat-dialog-actions align="end">
       <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Cancelar</button>
