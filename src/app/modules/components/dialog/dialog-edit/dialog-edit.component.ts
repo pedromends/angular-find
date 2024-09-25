@@ -73,7 +73,7 @@ export class DialogEditOpen {
     
     this.taskService.updateTask(this.form.value).subscribe((response) => {
       console.log(response)
-      alert('Updated successfully')
+      alert('Atualizado com sucesso')
       window.location.reload()
     })
 

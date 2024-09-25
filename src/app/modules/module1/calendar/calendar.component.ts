@@ -28,7 +28,7 @@ export class CalendarComponent implements OnInit {
     this.form.get('dateUpdate')?.setValue(this.form.get('dateCreation')?.value)
     
     this.taskService.createTask(this.form.value).subscribe((response) => {
-      alert('Saved successfully')
+      alert('Salvo com sucesso')
     })
     this.router.navigate(['/task-list']);
 
