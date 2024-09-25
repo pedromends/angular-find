@@ -43,7 +43,4 @@ Este projeto é uma aplicação web fullstack construída com **Angular.js** no 
 3. Execute o servidor de desenvolvimento:
    ```bash
    ng serve
-4. Clone o repositório:
-   ```bash
-   cd ../frontend
     
